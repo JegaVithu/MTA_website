@@ -38,8 +38,7 @@
       <div class="container py-1">
         <div class="row align-items-center">
           <div class="col-8 col-md-8 col-lg-4">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0"><strong>Modern Trip Assistant
-                  OS<span class="text-primary">.</span></strong></a></h1>
+            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0"><strong>Modern Trip Assistant<span class="text-primary">.</span></strong></a></h1>
           </div>
           <div class="col-4 col-md-4 col-lg-8">
             <nav class="site-navigation text-right text-md-right" role="navigation">
@@ -316,8 +315,8 @@
           <div class="site-section-heading text-center mb-5 w-border mx-auto">
             <h2 class="mb-5">Research Problem</h2>
             <p>
-                At present Mobile phones are one of those inventions that helps human beings in every possible way whether it could be communication or data storing. All the most important details such as personal health information, Credit card or Bank account details, addresses, email addresses and so on, are saved in the mobile phones. And it needs to be understood that loss of assets these days are not only refers to the loss of money and properties but also refers to the sensitive data that we possess.</p>
-          </div>
+                Nowadays tourism has become one of the major sources of Sri Lanka. There are many attractive tourist places cover the tourist but still they struggle to find the tourist places and tour guides.  There are some drawbacks impacting the tourism industry. When tourist search some places, they don’t get any proper way to reach the destination and also they don’t get better information regarding the places what they searched. At the time they might skip those places.
+               </div>
         </div>
       </div>
     </div>
@@ -331,13 +330,11 @@
             <h2 class="mb-5">Research gap</h2>
             <p>
                 In existing products:<br>
-                  •	No Accidental Data Leakage Prevention.<br>
-                  •	No implementation to detect Rogue access points at the user end.<br>
-                  •	Only Traditional Malware detection is used to detect malwares.<br>
-                  •	Most of the solutions require a 3rd party software to support 
-                    the cause.<br>
-                  •	Mostly solutions focused on Organization level.<br>
-                  •	Only basic level of protection is available.
+                  •	Tour Buddy.<br>
+                  •	TourPal.<br>
+                  •	TripAdvisor.<br>
+                  •	Tripomatic.<br>
+                  •	Minube.
                 </p>
           </div>
         </div>
@@ -351,73 +348,59 @@
         <div class="col-lg-12">
           <div class="site-section-heading mb-5 w-border mx-auto">
             <h2 class="mb-5">Methodology </h2>
-            <p>We need a set of devices and tools as the pre-requirements in order to carry out our process.<br>
-              • Machine with Linux or Mac (64-bit environment): - In order to compile Android<br>
-              • Sandbox: - It needs to be precautioned to safeguard the running system from malwares as we have to work
-              with malwares to get data set. <br>
-              • Machine Running Windows 7 or latest: - To run an emulator<br>
-              • Android Emulator: - To check for the capabilities and every build should be checked.<br>
-              • Mobile Phone with Android OS: - To check the customized ROM<br>
-              • Network Simulator: - In order to create fake access points.
+            <p>The process of the trip assistant system contains the sequences of process as follows. First, the user registers our application and we provide login change password delete account and more other basic options. All the register user details are stored in our main system and we save all those details with encrypted format. 
             </p>
                 <div class="col-md-12">
-                    <img src="images/md/1.png" alt="Smiley face" style="margin: auto; display:block;">
+                    <img src="images/md/1.jpeg" alt="Smiley face" style="margin: auto; display:block;">
                 </div>
             <p>
-              A) Research Architecture<br>
+              A. Tourist place detection (TPD)<br>
 
-              I. Create data set for each process.<br>
-              a. Data set for Accidental DLP<br>
-              b. Data set of Rogue access point/Evil twin access point details.<br>
-              c. Data set from samples of malicious files for Bluetooth security<br>
-              d. Data set from samples of malicious files for Wi-Fi Direct security<br>
-              II. Train the ML algorithm.<br>
-              III. Develop the keyboard to implement trained machine learning algorithm.<br>
-              IV. Implement detection part for wireless connectivity in order to detect Rogue access points with the
-              help of trained machine learning algorithm.<br>
-              V. Implement a firewall system for the Bluetooth channel with trained machine learning algorithm to detect
-              malicious files.<br>
-              VI. Implement a firewall system for the Wi-Fi direct channel with trained machine learning algorithm to
-              detect malicious files.<br>
-              VII. Configure Implemented firewall to maintain logs.<br>
-              VIII. Integrate all modules to a customized ROM.
-            </p>
-            <p>
-              B) Machine learning Architecture<br>
+              This functionality will detect tourist places in front of tourists or tourists place pictures they wish to identify, also it will give description about identified tourist place to the user as text output. This functionality will be developed through machine learning techniques and description data will be load from the firebase database. To achieve this functionality tourist places pictures are collected and trained an image classification machine learning model to predict the tourist places. The user can take pictures of tourist places in whatever the angle, so the tourist place detection component is developed to identify the tourist places in whatever the angle.
               <div class="col-md-12">
-                  <img src="images/md/2.png" alt="Smiley face" style="margin: auto; display:block;">
+                  <img src="images/md/2.jpeg" alt="Smiley face" style="margin: auto; display:block;">
               </div>
-              In the Machine learning architecture as the figure depicts, all the finalized data set will be taken to
-              processing state where critical attributes will be assigned for learning process. All processed data will
-              undergo any of four machine learning algorithms ( Eg: -Linear Discriminant Analysis, Classification and
-              Regression Trees, K-Nearest Neighbors, Learning Vector Quantization, Support Vector Machines) and the
-              learning outcome will be analyzed in Result analysis phase. In result analysis phase it will be decided
-              whether the outcome is reliable or not and the finally the highest accurate algorithms will be selected to
-              be used in every respective module.
             </p>
+
             <p>
-                I) Data Leakage Prevented Keyboard<br>
+                B. Virtual guide<br>
+  
+                This is a Real-time process and it is identifying the elements of the tourist places offered by the application and it is providing real-time information and voice-activated information. Image processing and Machine learning plays key aspects in this. Considering the application size, the data needed for this virtual guide will be obtained from time to time from the cloud database.  User can get information in any vies or angles so that will provide a comfortable user experience. There are some issues in this virtual guide function. Any changes in the surrounding or any changes in the actual state of the element and lighting conditions might cause trouble in identifying it properly. This function is highly depending on both the processing speed and network speed.<br><br>
+                The specific goals of the virtual guide functionality are given below.<br>
+                   1.Recognizing important element in real-time while the user is moving around with the virtual guide feature turned on, in service offered tourist locations in any position or angles.<br>
+                   2.Providing real-time information about recognized tourist elements both as text and voice-activated outputs to the user.<br>
+                   3.Providing timely alerts for the user for avoiding the tourist run out of time by spending more time in a place than allocated.<br>
                 <div class="col-md-12">
-                    <img src="images/md/6.jpeg" alt="Smiley face" style="margin: auto;display:block;width: 1060px;">
+                    <img src="images/md/3.jpeg" alt="Smiley face" style="margin: auto; display:block;">
                 </div>
-                
+                <div class="col-md-12">
+                    <img src="images/md/5.jpeg" alt="Smiley face" style="margin: auto; display:block;">
+                </div>
               </p>
-
               <p>
-                  II) Malware Detection<br>
-                  <div class="col-md-12">
-                      <img src="images/md/3.jpeg" alt="Smiley face" style="margin: auto;display:block;width: 1060px;">
-                  </div>
-                  
-                </p>
-
-                <p>
-                    III) Rogue Access point Detection<br>
+                  C. Hotel booking prediction<br>
+    
+                  The hotels will use web interface to register their hotels and using web portal hotels can manage all the booking related activities. Using our booking prediction facility, hotels can see the number of bookings for the following month in advance
                     <div class="col-md-12">
-                        <img src="images/md/4.jpeg" alt="Smiley face" style="margin: auto;display:block;width: 1060px;">
+                      <img src="images/md/6.jpeg" alt="Smiley face" style="margin: auto; display:block;">
+                  </div>
+                </p>
+                <p>
+                    C. Hotel booking prediction<br>
+      
+                    The hotels will use web interface to register their hotels and using web portal hotels can manage all the booking related activities. Using our booking prediction facility, hotels can see the number of bookings for the following month in advance
+                      <div class="col-md-12">
+                        <img src="images/md/6.jpeg" alt="Smiley face" style="margin: auto; display:block;">
                     </div>
-                    
                   </p>
+                  <p>
+                      D. 3D map with augmented reality<br>
+        
+                      Augmented reality is the technology that improves our world by adding some digital information on it. Tourist guide map is very important for the tourist they can find the places through the maps. In this research, we create a 3D map using augmented reality. Through this 3D map function, users can view their actual location with the 3D view and users can get this map on any other surface. This application is the real-time application and its get a user’s location from the phone GPS. This application used unity C# and the map box for that develop purposes.
+                       <div class="col-md-12">
+                          <img src="images/md/7.jpeg" alt="Smiley face" style="margin: auto; display:block;">
+                      </div>
+                    </p>
           </div>
         </div>
       </div>
